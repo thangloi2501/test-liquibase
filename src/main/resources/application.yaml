@@ -1,0 +1,21 @@
+spring:
+  liquibase:
+    change-log: classpath:db/liquibase-changelog.xml
+    enabled: true
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+  h2:
+    console:
+      enabled: true
+      path: /console
+      settings:
+        web-allow-others: true
+
+  datasource:
+    url: jdbc:h2:file:./db
+    driverClassName: org.h2.Driver
+    username: sa
+    password: 123
